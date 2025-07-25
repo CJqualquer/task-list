@@ -1,0 +1,222 @@
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            border: none;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
+            background-color: rgb(8, 8, 8);
+            border: 3px solid rgb(0, 25, 48);
+            color: #ffff;
+            width: 1400px;
+            height: 800px;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        .main-left{
+            display: flex;
+            flex-direction: column;
+            border: 2px solid rgb(255, 255, 255);
+            margin-right: 10px;
+            height: 780px;
+            width: 1100px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .main-right{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgb(29, 29, 29);
+            border-radius: 20px;
+            height: 800px;
+            width: 300px;
+        }
+        .seletores{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 30px;
+            gap: 20px;
+            border-radius: 20px;
+            width: 250px;
+            height: 500px;
+            user-select: none;
+        }
+        .seletores-de-tarefas{
+            display: flex;
+            transition: all 0.2s ease-out;
+        }
+        .seletores-de-tarefas:hover{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(0, 68, 68);
+            width: 200px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+        hr{
+            width: 250px;
+            background-color: #ffff;
+            height: 2px;
+        }
+        .div-button-new-task{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            width: 300px;
+            height: 200px;
+            
+        }
+        .button-new-task{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .button-new-task:hover{
+            background-color: rgb(192, 190, 190);
+        }
+        #new-task{
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            background-color: rgb(24, 24, 24);
+            width: 550px;
+            height: 50px;
+            border-radius: 10px;
+            gap: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            padding-left: 10px;
+            margin-bottom: 10px;
+        }
+        .checkbox{
+            cursor: pointer;
+            width: 25px;
+            height: 25px;
+        }
+        .div-button-delete{
+            display: flex;
+            justify-content: flex-end;
+            width: 300px;
+        }
+        #button-delete{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 0, 0, 0.192);
+            width: 30px;
+            transition: all 0.3s ease-out;
+            user-select: none;
+            
+        }
+        #button-delete:hover{
+            background-color:rgb(150, 0, 0) ;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #1b1b1b;
+            border: 1px solid #ffffff46;
+            height: 300px;
+            width: 600px;
+            border-radius: 20px;
+        }
+        .overlay-enter{
+            display: flex;
+            flex-direction: column;
+            background-color: #1b1b1b;
+            width: 560px;
+            height: 200px;
+            border-radius: 20px;
+        }
+        .input-tarefa{
+            height: 40px;
+            background-color: #3b3b3b;
+            color: #ffff;
+            font-family: sans-serif;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 10px;
+        }
+        .hr{
+            background-color: #ffffff00;
+            height: 1px;
+            width: 560px;
+        }
+        #text-descriçao{
+            resize: none;
+            color: #ffff;
+            background-color: #3b3b3b;
+            height: 80px;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .div-close-button{
+            display: flex;
+            justify-content: flex-end;
+            font-weight: 600;
+        }
+        #close-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            margin-bottom: 10px;
+            background-color: #3b3b3b;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+        }
+        .button-create-task{
+            border: none;
+            height: 40px;
+            width: 300px;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: 600;
+        }

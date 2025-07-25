@@ -4,190 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            text-decoration: none;
-            border: none;
-        }
-        body{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        h1{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        main{
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
-            background-color: rgb(8, 8, 8);
-            border: 3px solid rgb(0, 25, 48);
-            color: #ffff;
-            width: 1400px;
-            height: 800px;
-            border-radius: 10px;
-            padding: 20px;
-        }
-        .main-left{
-            display: flex;
-            border: 2px solid rgb(255, 255, 255);
-            margin-right: 10px;
-            height: 780px;
-            width: 1100px;
-            padding: 10px;
-            border-radius: 10px;
-        }
-        .main-right{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border: 2px solid rgb(255, 255, 255);
-            background-color: rgb(29, 29, 29);
-            border-radius: 20px;
-            height: 800px;
-            width: 300px;
-        }
-        .seletores{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 30px;
-            gap: 20px;
-            /* border: 2px solid rgb(139, 74, 74); */
-            border-radius: 20px;
-            width: 250px;
-            height: 500px;
-        }
-        .seletores-de-tarefas{
-            display: flex;
-        }
-        .seletores-de-tarefas:hover{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: rgb(0, 68, 68);
-            width: 200px;
-            height: 40px;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-        hr{
-            width: 250px;
-        }
-        .div-button-new-task{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-            width: 300px;
-            height: 200px;
-            
-        }
-        .button-new-task{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 250px;
-            height: 50px;
-            border-radius: 10px;
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .button-new-task:hover{
-            background-color: rgb(192, 190, 190);
-        }
-        #new-task{
-            display: flex;
-            align-items: center;
-            padding-left: 10px;
-            background-color: rgb(24, 24, 24);
-            width: 500px;
-            height: 50px;
-            border-radius: 10px;
-            gap: 20px;
-            font-size: 20px;
-            cursor: pointer;
-            padding-left: 10px;
-        }
-        .checkbox{
-            cursor: pointer;
-            width: 25px;
-            height: 25px;
-        }
-        .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.5);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-        .modal{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #1b1b1b;
-            border: 1px solid #ffffff46;
-            height: 300px;
-            width: 600px;
-            border-radius: 20px;
-        }
-        .overlay-enter{
-            display: flex;
-            flex-direction: column;
-            background-color: #ffffff;
-            width: 560px;
-            height: 200px;
-            border-radius: 20px;
-        }
-        #text-descriçao{
-            resize: none;
-        }
-        .input-tarefa{
-
-        }
-        .hr{
-            background-color: #1b1b1b;
-            height: 1px;
-            width: 560px;
-        }
-        #text-descriçao{
-            
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Comece uma rotina!</h1>
 
     <main>
         <div class="main-left" >
-            <div id="new-task" ><input class="checkbox" type="checkbox">Teste games</div>
+            <div id="new-task" >
+                <input class="checkbox" type="checkbox">
+                <div>teste</div>
+                <div>💼</div>
+                <div class="div-button-delete" >
+                    <div id="button-delete" >X</div>
+                </div>
+            </div>
         
         <div class="overlay" id="loginOverlay">
             <div class="modal" >
                 <div class="overlay-enter" >
+                    <div class="div-close-button" >
+                        <div onclick="FecharTarefa()" id="close-button" >X</div>
+                    </div>
                     <input class="input-tarefa" type="text" placeholder="Nome da tarefa" >
                     <hr class="hr" >
                     <textarea id="text-descriçao" placeholder="Adicionar uma descrição..." ></textarea>
                 </div>
                 
                 <div>
-                    <div><button>Adicionar tarefa</button></div>
+                    <div><button class="button-create-task" >Adicionar tarefa</button></div>
                 </div>
             </div>
         </div>
@@ -196,23 +41,17 @@
 
         <div class="main-right" >
                 <div class="seletores" >
-                    <div class="seletores-de-tarefas" >💼 Trabalho</div>
-                    <div class="seletores-de-tarefas" >🎒 Escola</div>
-                    <div class="seletores-de-tarefas" >🏡 Casa</div>
-                    <div class="seletores-de-tarefas" >⚽ Esporte</div>
+                    <div class="seletores-de-tarefas" onclick="selecionarTipo('💼')">💼 Trabalho</div>
+                    <div class="seletores-de-tarefas" onclick="selecionarTipo('🎒')">🎒 Escola</div>
+                    <div class="seletores-de-tarefas" onclick="selecionarTipo('🏡')">🏡 Casa</div>
+                    <div class="seletores-de-tarefas" onclick="selecionarTipo('⚽')">⚽ Esporte</div>
                 </div>
             <hr>
             <div class="div-button-new-task" >
                 <button onclick="NovaTarefa()" class="button-new-task" >Criar tarefa</button>
             </div>
         </div>
-
-
     </main>
-    <script>
-        function NovaTarefa(){
-            document.getElementById("loginOverlay").style.display = "flex";
-        }
-    </script>
+<script src="js.js"></script>
 </body>
 </html>
